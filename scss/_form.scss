@@ -1,0 +1,133 @@
+.page {
+    // .page__info
+    &__info {
+    }
+}
+.info {
+    // .info__container
+    &__container {
+    }
+    // .info__form
+    &__form {
+    }
+}
+.form {
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+    border-radius: 10px;
+    display: flex;
+    flex-direction: column;
+    row-gap: toRem(30);
+    max-width: toRem(600);
+    margin: 0 auto;
+    padding: toRem(30) toRem(50);
+    background: linear-gradient(90deg, rgba(2, 0, 36, 1) 0%, rgba(9, 9, 121, 1) 35%, rgba(32, 102, 117, 1) 100%);
+
+    // .form__line
+    &__line {
+        display: flex;
+        align-items: center;
+        gap: toRem(40);
+        justify-content: space-between;
+        & label {
+            flex-shrink: 0;
+        }
+
+        &--chek {
+            justify-content: start;
+            gap: toRem(10);
+            & input {
+                width: auto;
+            }
+        }
+    }
+
+    // .form__input
+    &__input {
+        height: 50px;
+        max-width: 50%;
+        outline: none;
+        border: toRem(1) solid rgba(255, 255, 255, 0.5);
+        padding: toRem(0) toRem(15);
+        border-radius: toRem(10);
+    }
+
+    // .form__group
+    &__group {
+    }
+
+    // .form__title
+    &__title {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+    }
+
+    // .form__radio
+    &__radio {
+        display: flex;
+        gap: toRem(10);
+    }
+
+    // .form__select
+    &__select {
+        padding: toRem(5) toRem(15);
+        width: 50%;
+        text-align: center;
+    }
+
+    // .form__textarea
+    &__textarea {
+        border: toRem(1) solid rgba(255, 255, 255, 0.5);
+        outline: none;
+        padding: toRem(10) toRem(15);
+        border-radius: toRem(10);
+        resize: vertical;
+        width: 50%;
+    }
+
+    // .form__checkbox
+    &__checkbox {
+    }
+
+    &__action {
+        display: flex;
+        flex-wrap: wrap;
+        gap: toRem(20);
+        justify-content: center;
+    }
+
+    // .form__button
+    &__button {
+        border: toRem(1) solid rgba(255, 255, 255, 0.5);
+        padding: toRem(10) toRem(20);
+        border-radius: toRem(10);
+        transition:
+            background-color,
+            border-color 0.3s ease-in-out;
+        @media (any-hover: hover) {
+            &:hover {
+                background-color: rgba(255, 255, 255, 0.1);
+                border-color: rgba(255, 255, 255, 0.8);
+            }
+        }
+    }
+}
+.password-wrapper {
+    position: relative;
+    width: 50%;
+    & input {
+        max-width: 100%;
+    }
+}
+.toggle-password {
+    position: absolute;
+    top: 50%;
+    transform: translateX(-50%) translateY(-50%);
+    right: 0;
+}
+
+.form-become-wrap {
+    width: 50%;
+    display: flex;
+    justify-content: space-between;
+}
